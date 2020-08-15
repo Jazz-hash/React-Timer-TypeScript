@@ -65,6 +65,7 @@ class Timer extends Component<{}, TimerState> {
 
   playAlarm() {
     audio.load();
+    audio.loop = true;
     const audioPromise = audio.play();
     if (audioPromise !== undefined) {
       audioPromise
